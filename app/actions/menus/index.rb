@@ -2,13 +2,13 @@
 
 module IceCream
   module Actions
-    module Shops
+    module Menus
       class Index < IceCream::Action
         include Deps[
-          shops: 'repositories.shops'
+          menus: 'repositories.menus'
         ]
         def handle(*, response)
-          response.render(view, shops: shops.with_current_menu)
+          response.render(view, menus: menus.all)
         end
       end
     end

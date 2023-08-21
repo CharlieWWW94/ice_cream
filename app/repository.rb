@@ -4,6 +4,6 @@ require 'rom-repository'
 
 module IceCream
   class Repository < ROM::Repository::Root
-    include Deps['persistence.rom']
+    include Deps[container: 'persistence.rom']
   end
 end

@@ -2,10 +2,10 @@
 
 module IceCream
   module Views
-    module Shops
+    module Menus
       class Index < IceCream::View
-        expose :shops do |shops:|
-          shops
+        expose :menus do |menus:|
+          menus
         end
       end
     end
