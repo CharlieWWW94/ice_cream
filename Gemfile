@@ -39,3 +39,5 @@ end
 group :test do
   gem 'rack-test'
 end
+
+gem "hanami-helpers", "~> 0.0.0"
