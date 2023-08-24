@@ -7,13 +7,13 @@ module IceCream
         schema(:shops, infer: true) do
           associations do
             has_many :shops_menus
-            has_many :menus, through: :shops_menus
+            has_many :menus, through: :shops_menus, view: :current
           end
         end
 
-        def all_with_current_menu
-          combine(shops_menus: :menus).node(:shops_menus) do |shops_menus_relation|
-            shops_menus_relation.where(current: true)
+        def with_current_menu
+          combine(:menus).node(:menus) do |menus|
+            menus.where(current: true)
           end
         end
       end

@@ -2,7 +2,14 @@
   <h1>All Shops:</h1>
   <div>
     <% shops.each do |shop| %>
-    <p><%= shop %></p>
+    <% current_menu = shop.menus.first  %>
+    <p><%= shop.street_number %></p>
+    <p><%= shop.street %></p>
+    <p><%= shop.city %></p>
+    <p><%= shop.country %></p>
+    <p><%= shop.postcode %></p>
+    <p><%= shop.is_open ? 'Open' : 'Closed' %></p>
+    <p>Current Menu: <%= current_menu.name  %></p>
     <% end %>
   </div>
 </div>
