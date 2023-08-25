@@ -6,14 +6,14 @@ module IceCream
     module Shops
       class New < IceCream::View
         # doesnt work :(
-        include Hanami::Helpers
-        expose :form
+        # include Hanami::Helpers
+        # expose :form
 
-        def form
-          form_for :shops, '/shops' do
-            submit 'Create'
-          end
-        end
+        # def form
+        #   form_for :shops, '/shops' do
+        #     submit 'Create'
+        #   end
+        # end
       end
     end
   end

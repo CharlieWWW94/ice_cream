@@ -1,4 +1,4 @@
-<div data-controller="hello">
+<div data-controller="shops">
   <h1>All Shops:</h1>
   <div>
     <% shops.each do |shop| %>
@@ -9,7 +9,13 @@
     <p><%= shop.country %></p>
     <p><%= shop.postcode %></p>
     <p><%= shop.is_open ? 'Open' : 'Closed' %></p>
-    <p>Current Menu: <%= current_menu.name  %></p>
+    <p>Current Menu: <%= current_menu&.name  %></p>
+    <button 
+      data-action='click->shops#delete'
+      data-shop-id= <%= shop.id %>
+    >
+      Delete Shop
+    </button>
     <% end %>
   </div>
 </div>

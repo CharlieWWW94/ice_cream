@@ -7,5 +7,6 @@ module IceCream
     get '/menus', to: 'menus.index'
     post '/shops', to: 'shops.create'
     get '/shops/new', to: 'shops.new'
+    delete '/shops/:shop_id', to: 'shops.destroy'
   end
 end
