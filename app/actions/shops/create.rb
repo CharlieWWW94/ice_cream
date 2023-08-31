@@ -16,7 +16,8 @@ module IceCream
         end
 
         def handle(request, response)
-          shops.create(request.params.to_h) if request.params.valid?
+          halt 422 unless request.params.valid?
+          shops.create(request.params.to_h)
           response.redirect_to routes.path(:shops)
         end
       end

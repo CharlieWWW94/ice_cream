@@ -1,0 +1,16 @@
+<div data-controller='shop'>
+  <h1>Shop Details:</h1>
+  <div data-shop-target='details'>
+    <p><%= shop.street_number %></p>
+    <p><%= shop.street %></p>
+    <p><%= shop.city %></p>
+    <p><%= shop.country %></p>
+    <p><%= shop.postcode %></p>
+    <p><%= shop.is_open ? 'Open' : 'Closed' %></p>
+    <button data-action= 'click->shop#displayForm'>Edit Details</button>
+  </div>
+  <div data-shop-target='form' style='display:none;'> 
+    <%= render :update_shop, shop: shop %>
+    <button data-action= 'click->shop#hideForm'>Cancel</button>
+  </div>
+</div>

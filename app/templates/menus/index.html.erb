@@ -1,8 +1,10 @@
 <div data-controller="hello">
   <h1>All Menus:</h1>
-  <div>
-    <% menus.each do |menu| %>
-     <p><%= menu.name %></p>
+  <% menus.each do |menu| %>
+    <h3><%= menu.name %></h3>
+    <h4>Ice creams on this menu:</h4>
+    <% menu.ice_creams.each do |ice_cream| %>
+      <p><%= ice_cream.flavour %> </p>
     <% end %>
-  </div>
+  <% end %>
 </div>

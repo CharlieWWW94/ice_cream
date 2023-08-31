@@ -4,7 +4,7 @@ export default class extends Controller {
 
 
   connect() {
-    console.log('Hello there! shoppy')
+    console.log('shops controller')
   }
 
   async delete(event) {
@@ -15,7 +15,8 @@ export default class extends Controller {
         method: 'DELETE'
       }
     )
-    console.log(response)
+    // Replace with display none if status 200?
+    window.location.reload()
   }
 
 }

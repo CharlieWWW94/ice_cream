@@ -8,7 +8,11 @@ module IceCream
           shops: 'repositories.shops'
         ]
         def handle(*, response)
-          response.render(view, shops: shops.with_current_menu)
+          response.render(
+            view,
+            shops: shops.with_current_menu,
+            routes: routes
+          )
         end
       end
     end

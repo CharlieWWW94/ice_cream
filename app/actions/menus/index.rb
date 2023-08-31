@@ -8,7 +8,7 @@ module IceCream
           menus: 'repositories.menus'
         ]
         def handle(*, response)
-          response.render(view, menus: menus.all)
+          response.render(view, menus: menus.with_ice_creams)
         end
       end
     end

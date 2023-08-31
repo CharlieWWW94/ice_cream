@@ -5,7 +5,7 @@ module IceCream
     module Menus
       class Index < IceCream::View
         expose :menus do |menus:|
-          menus
+            menus
         end
       end
     end

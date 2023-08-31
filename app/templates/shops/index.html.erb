@@ -1,21 +1,24 @@
-<div data-controller="shops">
+<div data-controller='shops'>
   <h1>All Shops:</h1>
   <div>
     <% shops.each do |shop| %>
-    <% current_menu = shop.menus.first  %>
-    <p><%= shop.street_number %></p>
-    <p><%= shop.street %></p>
-    <p><%= shop.city %></p>
-    <p><%= shop.country %></p>
-    <p><%= shop.postcode %></p>
-    <p><%= shop.is_open ? 'Open' : 'Closed' %></p>
-    <p>Current Menu: <%= current_menu&.name  %></p>
-    <button 
-      data-action='click->shops#delete'
-      data-shop-id= <%= shop.id %>
-    >
-      Delete Shop
-    </button>
+      <% current_menu = shop.menus.first %>
+      <p><%= shop.street_number %></p>
+      <p><%= shop.street %></p>
+      <p><%= shop.city %></p>
+      <p><%= shop.country %></p>
+      <p><%= shop.postcode %></p>
+      <p><%= shop.is_open ? 'Open' : 'Closed' %></p>
+      <p>Current Menu: <%= current_menu&.name %></p>
+      <button
+        data-action='click->shops#delete'
+        data-shop-id=<%= shop.id %>>
+        Delete Shop
+      </button>
+      <a
+        href=<%= routes.path(:shop, id: shop.id) %>>
+        <button>View Shop</button>
+      </a>
     <% end %>
   </div>
 </div>

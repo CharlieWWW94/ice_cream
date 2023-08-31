@@ -1,0 +1,23 @@
+<form data-action='submit->shop#submitUpdate' action='/shops' method='POST' data-shop-id=<%= shop.id %>>
+  <label for='street_number'>Street Number:</label>
+  <br>
+  <input type='text' id='street_number' name='street_number'>
+  <br>
+  <label for='street'>Street:</label>
+  <br>
+  <input type='text' id='street' name='street'>
+  <br>
+  <label for='city'>City:</label>
+  <br>
+  <input type='text' id='city' name='city'>
+  <br>
+  <label for='country'>Country:</label>
+  <br>
+  <input type='text' id='country' name='country'>
+  <br>
+  <label for='postcode' id='postcode'>Post / Zip Code:</label>
+  <br>
+  <input type='text' id='postcode' name='postcode'>
+  <br>
+  <input type='submit' value='Update'>
+</form>

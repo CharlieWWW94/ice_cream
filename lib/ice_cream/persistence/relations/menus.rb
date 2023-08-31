@@ -21,6 +21,10 @@ module IceCream
         def current
           select_append(shops_menus[:current])
         end
+
+        def with_ice_creams
+          combine(:ice_creams)
+        end
       end
     end
   end

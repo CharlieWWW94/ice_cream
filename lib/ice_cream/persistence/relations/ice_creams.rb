@@ -7,7 +7,9 @@ module IceCream
         schema(:ice_creams, infer: true) do
           associations do
             has_many :menus_ice_creams
-            belongs_to :menu, through: :menus_ice_creams
+            # ROM wasn't happy with menus, thought it was singular
+            # and pluralised to menuses, specifying the relation fixed.
+            belongs_to :menus, through: :menus_ice_creams, relation: :menus
           end
         end
       end

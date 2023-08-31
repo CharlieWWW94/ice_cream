@@ -8,7 +8,7 @@ module IceCream
           shops: 'repositories.shops'
         ]
         def handle(request, response)
-          shop_id = request.params[:shop_id]
+          shop_id = request.params[:id]
           shops.delete(shop_id)
           response.body = { 'success' => "Shop #{shop_id} was deleted" }
           response.status = 200
